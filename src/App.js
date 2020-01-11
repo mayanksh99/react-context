@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
 import Form from "./Form";
+import PageContext from "./contexts/PageContent";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 class App extends Component {
   render() {
     return (
-      <>
-        <Navbar />
-        <Form />
-      </>
+      <ThemeProvider>
+        <PageContext>
+          <Navbar />
+          <Form />
+        </PageContext>
+      </ThemeProvider>
     );
   }
 }
