@@ -3,15 +3,18 @@ import Navbar from "./Navbar";
 import Form from "./Form";
 import PageContext from "./contexts/PageContent";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 
 class App extends Component {
   render() {
     return (
       <ThemeProvider>
-        <PageContext>
-          <Navbar />
-          <Form />
-        </PageContext>
+        <LanguageProvider>
+          <PageContext>
+            <Navbar />
+            <Form />
+          </PageContext>
+        </LanguageProvider>
       </ThemeProvider>
     );
   }
