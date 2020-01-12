@@ -21,5 +21,3 @@ export class ThemeProvider extends Component {
     );
   }
 }
-
-export default ThemeProvider;
